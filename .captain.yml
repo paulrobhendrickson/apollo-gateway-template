@@ -1,0 +1,26 @@
+---
+kind: kubernetes
+app: connecteddataapi
+type: web
+team: anhdomainapi
+docker_image: connecteddataapi
+internal: false
+replicas: 1
+container_port: 4000
+read_only_root_filesystem: false
+healthcheck:
+  path: /health
+  initialDelaySeconds: 60
+  timeoutSeconds: 50
+  periodSeconds: 50
+  failureThreshold: 10
+revisionHistoryLimit: 10
+dns:
+  zone: cglcloud
+  name: connecteddataapi
+configs:
+  - name: secrets
+    type: secret
+    containers: [connecteddataapi]
+    secrets:
+      - name: NODE_ENV
