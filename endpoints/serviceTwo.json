@@ -1,8 +1,8 @@
 {
   "name": "two",
-  "dev_url": "https://apollofedtesttwo.dev.cglcloud.in/graphql",
-  "stage_url": "https://apollofedtesttwo.stage.cglcloud.in/graphql",
-  "prod_url": "http://localhost:4002/graphql",
-  "git_repo": "https://git.cglcloud.com/anh-domain-api/apollofedtesttwo",
-  "team": "anhdomainapi"
+  "dev_url": "http://localhost:4002/graphql",
+  "stage_url": "",
+  "prod_url": "",
+  "git_repo": "",
+  "team": ""
 }
