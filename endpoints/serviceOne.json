@@ -1,8 +1,8 @@
 {
-  "name": "one",
+  "name": "two",
   "dev_url": "http://localhost:4001/graphql",
-  "stage_url": "",
-  "prod_url": "",
-  "git_repo": "",
-  "team": ""
+  "stage_url": "https://www.test.com/test",
+  "prod_url": "https://www.test.com/test",
+  "git_repo": "https://www.test.com/test",
+  "maintainer": "test"
 }

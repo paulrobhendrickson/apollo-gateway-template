@@ -5,7 +5,7 @@ dotenv.config();
 
 type serviceType = {
   name: string;
-  team: string;
+  maintainer: string;
   git_repo: string;
   dev_url: string;
   stage_url: string;
@@ -24,7 +24,7 @@ export const parseServices = (...service: serviceType[] | any[]) => {
 const checkService = (service: serviceType) => {
   if (
     !service.hasOwnProperty("name") ||
-    !service.hasOwnProperty("team") ||
+    !service.hasOwnProperty("maintainer") ||
     !service.hasOwnProperty("git_repo") ||
     !service.hasOwnProperty("dev_url") ||
     !service.hasOwnProperty("stage_url") ||
@@ -36,8 +36,8 @@ const checkService = (service: serviceType) => {
   if (
     typeof service.name !== "string" ||
     service.name.length < 1 ||
-    typeof service.team !== "string" ||
-    service.team.length < 1 ||
+    typeof service.maintainer !== "string" ||
+    service.maintainer.length < 1 ||
     !validURL(service.git_repo)
   ) {
     return false;
@@ -54,7 +54,7 @@ const checkService = (service: serviceType) => {
       return validURL(service.prod_url);
 
     default:
-      return false;
+      return validURL(service.dev_url);
   }
 };
 
